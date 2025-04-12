@@ -18,6 +18,10 @@ composer install && bun install
 ```
 
 ```
+php artisan migrate
+```
+
+```
 php artisan serve && bun run dev
 ```
 
