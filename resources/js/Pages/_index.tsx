@@ -133,7 +133,11 @@ export default function HomePage() {
                         PENDAPATAN
                     </div>
                     <div>{formatCurrencyRp(totalPendapatan)}</div>
-                    <PayChart theme="green" data={chartDataPendapatan} />
+                    {totalPendapatan !== 0 ? (
+                        <PayChart theme="green" data={chartDataPendapatan} />
+                    ) : (
+                        ""
+                    )}
                 </section>
                 <section className="z-50 gap-3 p-4 font-mono bg-white border-2 border-dashed rounded-lg border-sky-200">
                     <AlertYell
@@ -338,14 +342,22 @@ export default function HomePage() {
                         PENDAPATAN
                     </div>
                     <div>{formatCurrencyRp(totalPendapatan)}</div>
-                    <PayChart theme="green" data={chartDataPendapatan} />
+                    {totalPendapatan !== 0 ? (
+                        <PayChart theme="green" data={chartDataPendapatan} />
+                    ) : (
+                        ""
+                    )}
                 </section>
                 <section className="z-50 gap-3 p-4 font-mono bg-white border-2 border-dashed rounded-lg border-sky-200">
                     <div className="text-xl font-semibold text-slate-700">
                         PENGELUARAN
                     </div>
                     <div>{formatCurrencyRp(totalPengeluaran)}</div>
-                    <PayChart theme="red" data={chartDataPengeluaran} />
+                    {totalPengeluaran !== 0 ? (
+                        <PayChart theme="red" data={chartDataPengeluaran} />
+                    ) : (
+                        ""
+                    )}
                 </section>
             </div>
         </div>
